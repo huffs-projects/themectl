@@ -1,0 +1,53 @@
+.TH THEMECTL-BACKUPS 1 "2024" "themectl" "User Commands"
+.SH NAME
+themectl backups \- manage backup files
+.SH SYNOPSIS
+.B themectl backups
+\fICOMMAND\fR [\fIOPTIONS\fR]
+.SH DESCRIPTION
+Manage backup files created by themectl when applying themes. Backups are
+automatically created before modifying configuration files.
+.SH COMMANDS
+.TP
+.BR list
+List all backup files with original paths and timestamps
+.TP
+.BR restore \fIBACKUP\fR
+Restore a backup file to its original location
+.TP
+.BR clean
+Clean old backup files
+.SH OPTIONS
+.TP
+.BR \-\-config-dir \fIPATH\fR
+Config directory to operate on (for list and clean)
+.TP
+.BR \-\-days \fIN\fR
+Keep backups newer than N days (for clean, default: 30)
+.SH EXAMPLES
+List all backups:
+.RS
+.PP
+themectl backups list
+.RE
+.PP
+Restore a backup:
+.RS
+.PP
+themectl backups restore ~/.config/kitty/kitty.conf.backup.20240101-120000
+.RE
+.PP
+Clean backups older than 30 days:
+.RS
+.PP
+themectl backups clean
+.RE
+.PP
+Clean backups older than 7 days:
+.RS
+.PP
+themectl backups clean --days 7
+.RE
+.SH SEE ALSO
+.BR themectl (1),
+.BR themectl-apply (1)

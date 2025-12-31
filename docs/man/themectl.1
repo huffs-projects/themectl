@@ -1,0 +1,111 @@
+.TH THEMECTL 1 "2024" "themectl" "User Commands"
+.SH NAME
+themectl \- unified theming solution for Frog-OS applications
+.SH SYNOPSIS
+.B themectl
+[\fIOPTIONS\fR] \fICOMMAND\fR [\fIARGS\fR]
+.SH DESCRIPTION
+\fBthemectl\fR is a unified theming solution that reads TOML theme definitions
+and generates configuration files for multiple applications including Kitty,
+Waybar, Hyprland, Neovim, Starship, Mako, and more.
+.PP
+Themes are defined in TOML format and can be applied to all supported
+applications with a single command. \fBthemectl\fR automatically detects
+configuration file locations and creates backups before making changes.
+.SH OPTIONS
+.TP
+.BR \-\-themes-dir \fIPATH\fR
+Override the default themes directory (default: ./themes)
+.TP
+.BR \-\-dry-run
+Preview changes without applying them
+.SH COMMANDS
+.TP
+.BR apply \fITHEME\fR
+Apply a theme to all detected applications
+.TP
+.BR list
+List all available themes
+.TP
+.BR create \fINAME\fR
+Create a new theme interactively
+.TP
+.BR validate \fIPATH\fR
+Validate a theme file
+.TP
+.BR export \fITHEME\fR \fIFORMAT\fR
+Export theme to a specific format
+.TP
+.BR show \fITHEME\fR
+Show theme details
+.TP
+.BR edit \fITHEME\fR
+Edit an existing theme interactively
+.TP
+.BR preview \fITHEME\fR
+Preview theme with color swatches and generated configs
+.TP
+.BR delete \fITHEME\fR
+Delete a theme
+.TP
+.BR rename \fIOLD\fR \fINEW\fR
+Rename a theme
+.TP
+.BR duplicate \fITHEME\fR \fINEW\fR
+Duplicate a theme
+.TP
+.BR search \fIQUERY\fR
+Search themes by name or description
+.TP
+.BR init
+Initialize theme directory structure
+.TP
+.BR variant
+Manage theme variants (see \fBthemectl-variant\fR(1))
+.TP
+.BR config
+Manage themectl configuration (see \fBthemectl-config\fR(1))
+.TP
+.BR backups
+Manage backup files (see \fBthemectl-backups\fR(1))
+.SH EXAMPLES
+Apply a theme:
+.RS
+.PP
+themectl apply gruvbox-dark
+.RE
+.PP
+List available themes:
+.RS
+.PP
+themectl list
+.RE
+.PP
+Export theme to Kitty format:
+.RS
+.PP
+themectl export gruvbox-dark kitty --output kitty.conf
+.RE
+.PP
+Preview a theme:
+.RS
+.PP
+themectl preview gruvbox-dark
+.RE
+.SH FILES
+.TP
+.B ~/.config/themectl/config.toml
+Configuration file for themectl
+.TP
+.B ./themes/
+Default themes directory
+.SH SEE ALSO
+.BR themectl-apply (1),
+.BR themectl-export (1),
+.BR themectl-variant (1),
+.BR themectl-config (1),
+.BR themectl-backups (1)
+.SH AUTHOR
+themectl contributors
+.SH COPYRIGHT
+Copyright \(co 2024, GPL-2.0 License

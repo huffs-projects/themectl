@@ -1,0 +1,44 @@
+.TH THEMECTL-VARIANT 1 "2024" "themectl" "User Commands"
+.SH NAME
+themectl variant \- manage theme variants
+.SH SYNOPSIS
+.B themectl variant
+\fICOMMAND\fR [\fIARGS\fR]
+.SH DESCRIPTION
+Manage theme variants (dark/light). Variants can be created automatically
+or manually edited.
+.SH COMMANDS
+.TP
+.BR create \fITHEME\fR \fIVARIANT\fR
+Create a variant of a theme
+.TP
+.BR switch \fITHEME\fR \fIVARIANT\fR
+Switch to a variant
+.TP
+.BR list \fITHEME\fR
+List available variants for a theme
+.SH OPTIONS
+.TP
+.BR \-\-auto
+Auto-generate variant instead of prompting (for create command)
+.SH EXAMPLES
+Create a light variant:
+.RS
+.PP
+themectl variant create gruvbox light --auto
+.RE
+.PP
+Switch to dark variant:
+.RS
+.PP
+themectl variant switch gruvbox dark
+.RE
+.PP
+List variants:
+.RS
+.PP
+themectl variant list gruvbox
+.RE
+.SH SEE ALSO
+.BR themectl (1),
+.BR themectl-apply (1)

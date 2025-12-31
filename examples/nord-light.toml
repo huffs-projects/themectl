@@ -1,0 +1,27 @@
+name = "nord-light"
+description = "Nord light theme - An arctic, north-bluish color palette (light variant)"
+variant = "light"
+
+[colors]
+bg = "#eceff4"
+fg = "#2e3440"
+accent = "#5e81ac"
+red = "#bf616a"
+green = "#a3be8c"
+yellow = "#ebcb8b"
+blue = "#5e81ac"
+magenta = "#b48ead"
+cyan = "#8fbcbb"
+orange = "#d08770"
+purple = "#b48ead"
+pink = "#b48ead"
+white = "#eceff4"
+black = "#3b4252"
+gray = "#d8dee9"
+
+[properties]
+border_radius = 8
+border_width = 2
+shadow_blur = 10
+animation_duration = 0.2
+spacing = 4

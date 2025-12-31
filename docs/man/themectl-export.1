@@ -1,0 +1,48 @@
+.TH THEMECTL-EXPORT 1 "2024" "themectl" "User Commands"
+.SH NAME
+themectl export \- export theme to specific format
+.SH SYNOPSIS
+.B themectl export
+\fITHEME\fR \fIFORMAT\fR [\fIOPTIONS\fR]
+.PP
+.B themectl export
+\fITHEME\fR all [\fIOPTIONS\fR]
+.SH DESCRIPTION
+Export a theme to a specific application format or all formats at once.
+.PP
+Supported formats: kitty, waybar, neovim, starship, mako, hyprland,
+hyprpaper, wofi, wlogout, fastfetch, nix, yazi
+.SH OPTIONS
+.TP
+.BR \-\-output \fIPATH\fR
+Output file path (or directory if exporting all formats)
+.TP
+.BR \-\-all
+Export all formats at once (alternative to "all" format name)
+.SH EXAMPLES
+Export to Kitty format:
+.RS
+.PP
+themectl export gruvbox-dark kitty
+.RE
+.PP
+Export to file:
+.RS
+.PP
+themectl export gruvbox-dark kitty --output kitty.conf
+.RE
+.PP
+Export all formats to directory:
+.RS
+.PP
+themectl export gruvbox-dark all --output ./exports/
+.RE
+.PP
+Export all formats using flag:
+.RS
+.PP
+themectl export gruvbox-dark kitty --all --output ./exports/
+.RE
+.SH SEE ALSO
+.BR themectl (1),
+.BR themectl-generators (7)

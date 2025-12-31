@@ -1,0 +1,48 @@
+.TH THEMECTL-APPLY 1 "2024" "themectl" "User Commands"
+.SH NAME
+themectl apply \- apply a theme to all applications
+.SH SYNOPSIS
+.B themectl apply
+\fITHEME\fR [\fIOPTIONS\fR]
+.SH DESCRIPTION
+Apply a theme to all detected applications. \fBthemectl\fR will automatically
+detect configuration file locations and create backups before modifying files.
+.PP
+The theme name should not include the .toml extension.
+.SH OPTIONS
+.TP
+.BR \-\-config-dir \fIPATH\fR
+Override the default config directory (~/.config)
+.TP
+.BR \-\-apps \fIAPPS\fR
+Apply to specific applications only (comma-separated list)
+.TP
+.BR \-\-variant \fIVARIANT\fR
+Apply a specific variant (dark/light)
+.SH EXAMPLES
+Apply a theme to all applications:
+.RS
+.PP
+themectl apply gruvbox-dark
+.RE
+.PP
+Apply theme to specific applications:
+.RS
+.PP
+themectl apply gruvbox-dark --apps kitty,waybar,neovim
+.RE
+.PP
+Apply a light variant:
+.RS
+.PP
+themectl apply gruvbox --variant light
+.RE
+.PP
+Preview changes without applying:
+.RS
+.PP
+themectl apply gruvbox-dark --dry-run
+.RE
+.SH SEE ALSO
+.BR themectl (1),
+.BR themectl-preview (1)

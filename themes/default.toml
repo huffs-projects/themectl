@@ -1,0 +1,22 @@
+name = "gruvbox-dark"
+description = "Gruvbox dark theme"
+
+[colors]
+bg = "#282828"
+fg = "#ebdbb2"
+accent = "#fe8019"
+red = "#cc241d"
+green = "#98971a"
+yellow = "#d79921"
+blue = "#458588"
+magenta = "#b16286"
+cyan = "#689d6a"
+orange = "#d65d0e"
+purple = "#b16286"
+
+[properties]
+border_radius = 0
+border_width = 2
+shadow_blur = 10
+animation_duration = 0.2
+spacing = 4

@@ -1,0 +1,58 @@
+.TH THEMECTL-CONFIG 1 "2024" "themectl" "User Commands"
+.SH NAME
+themectl config \- manage themectl configuration
+.SH SYNOPSIS
+.B themectl config
+\fICOMMAND\fR [\fIARGS\fR]
+.SH DESCRIPTION
+Manage themectl configuration including custom config paths and NixOS mode.
+.SH COMMANDS
+.TP
+.BR set-path \fIAPP\fR \fIPATH\fR
+Set custom config file path for an application
+.TP
+.BR get-path \fIAPP\fR
+Get current config file path for an application
+.TP
+.BR enable-nixos
+Enable NixOS mode (use NixOS-specific paths)
+.TP
+.BR disable-nixos
+Disable NixOS mode
+.TP
+.BR create-template \fIAPP\fR
+Create a config file template for an application
+.SH OPTIONS
+.TP
+.BR \-\-path \fIPATH\fR
+Output path for create-template command
+.SH EXAMPLES
+Set custom Kitty config path:
+.RS
+.PP
+themectl config set-path kitty /custom/path/kitty.conf
+.RE
+.PP
+Get current path:
+.RS
+.PP
+themectl config get-path kitty
+.RE
+.PP
+Enable NixOS mode:
+.RS
+.PP
+themectl config enable-nixos
+.RE
+.PP
+Create template:
+.RS
+.PP
+themectl config create-template kitty
+.RE
+.SH FILES
+.TP
+.B ~/.config/themectl/config.toml
+Configuration file location
+.SH SEE ALSO
+.BR themectl (1)

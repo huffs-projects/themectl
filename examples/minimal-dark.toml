@@ -1,0 +1,14 @@
+name = "minimal-dark"
+description = "Minimal dark theme with only required colors"
+variant = "dark"
+
+[colors]
+bg = "#1e1e1e"
+fg = "#d4d4d4"
+accent = "#007acc"
+red = "#f48771"
+green = "#89d185"
+yellow = "#dcdcaa"
+blue = "#569cd6"
+magenta = "#c586c0"
+cyan = "#4ec9b0"

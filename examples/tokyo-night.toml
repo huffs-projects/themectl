@@ -1,0 +1,27 @@
+name = "tokyo-night"
+description = "Tokyo Night theme - Clean, dark theme inspired by Tokyo"
+variant = "dark"
+
+[colors]
+bg = "#1a1b26"
+fg = "#c0caf5"
+accent = "#7aa2f7"
+red = "#f7768e"
+green = "#9ece6a"
+yellow = "#e0af68"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+cyan = "#7dcfff"
+orange = "#ff9e64"
+purple = "#bb9af7"
+pink = "#bb9af7"
+white = "#c0caf5"
+black = "#15161e"
+gray = "#565f89"
+
+[properties]
+border_radius = 6
+border_width = 2
+shadow_blur = 12
+animation_duration = 0.25
+spacing = 5
