@@ -179,32 +179,6 @@ themectl apply gruvbox-dark --config-dir /custom/path
 - [Theme Format](docs/THEME_FORMAT.md) - Theme file format specification
 - [Generators](docs/GENERATORS.md) - Generator documentation
 
-## Project Structure
-
-```
-themectl/
-├── Cargo.toml
-├── src/
-│   ├── main.rs              # CLI entry point
-│   ├── cli.rs               # Command definitions
-│   ├── theme.rs             # Theme data structures
-│   ├── parser.rs            # TOML parsing and validation
-│   ├── file_manager.rs      # Config file management
-│   ├── utils.rs             # Color utilities
-│   └── generators/          # Application-specific generators
-│       ├── kitty.rs
-│       ├── waybar.rs
-│       ├── neovim.rs
-│       └── ...
-├── themes/                  # Theme files
-│   └── default.toml
-├── docs/                    # Documentation
-│   ├── NIX_INTEGRATION.md   # Nix flakes and Home Manager guide
-│   ├── THEME_FORMAT.md      # Theme format specification
-│   └── GENERATORS.md        # Generator documentation
-└── README.md
-```
-
 ## License
 
-GPL-2.0
+[GPL-2.0](LICENSE.md)
